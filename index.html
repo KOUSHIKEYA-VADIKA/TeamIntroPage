@@ -1,24 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Team</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=Inter:wght@400;500&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 64px 24px;
+    background: #101820;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .member {
+    width: 220px;
+    text-align: center;
+  }
+
+  /* photo frame: brass corner brackets around the portrait, like a lab ID plate */
+  .frame {
+    position: relative;
+    width: 132px;
+    height: 132px;
+    margin: 0 auto 20px;
+  }
+
+  .frame::before,
+  .frame::after,
+  .frame span::before,
+  .frame span::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #C9A227;
+  }
+
+  .frame::before { top: -8px; left: -8px; border-right: none; border-bottom: none; }
+  .frame::after { top: -8px; right: -8px; border-left: none; border-bottom: none; }
+  .frame span::before { bottom: -8px; left: -8px; border-right: none; border-top: none; }
+  .frame span::after { bottom: -8px; right: -8px; border-left: none; border-top: none; }
+
+  .member img {
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid rgba(201, 162, 39, 0.35);
+  }
+
+  .member h2 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: #E8E3D8;
+    margin: 0 0 8px;
+  }
+
+  .department {
+    display: inline-block;
+    font-size: 13px;
+    color: #8A94A6;
+    margin: 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #C9A227;
+  }
+</style>
+</head>
+<body>
+
 <div class="team">
 
     <div class="member">
-        <img src="https://i.pravatar.cc/150?img=12"
-             alt="Koushikeya Vadika" width="70" height="90">
+        <div class="frame">
+            <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Koushikeya%20Vadika&backgroundColor=101820" alt="Koushikeya Vadika" width="132" height="132">
+            <span></span>
+        </div>
         <h2>Koushikeya Vadika</h2>
-        <p class="department">Computer Science & Engineering</p>
+        <p class="department">Computer Science &amp; Engineering</p>
     </div>
 
     <div class="member">
-        <img src="https://i.pravatar.cc/150?img=5"
-             alt="Team Member" width="70" height="90">
+        <div class="frame">
+            <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Team%20Member&backgroundColor=101820" alt="Team Member" width="132" height="132">
+            <span></span>
+        </div>
         <h2>Team Member</h2>
         <p class="department">Product Development</p>
     </div>
 
     <div class="member">
-        <img src="https://i.pravatar.cc/150?img=33"
-             alt="Rahul Kumar" width="70" height="90">
+        <div class="frame">
+            <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Rahul%20Kumar&backgroundColor=101820" alt="Rahul Kumar" width="132" height="132">
+            <span></span>
+        </div>
         <h2>Rahul Kumar</h2>
         <p class="department">Software Development Intern</p>
     </div>
 
 </div>
+
+</body>
+</html>
